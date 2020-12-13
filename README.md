@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# React Video Games
 
-Ce projet est un prototype d'application React avec donnees via API
+Un prototype d'application React avec les donnees d'une API
+
+** Packages utilisés:
 
 * redux 
 * react-redux 
