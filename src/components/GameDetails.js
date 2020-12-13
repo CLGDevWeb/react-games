@@ -5,8 +5,9 @@ import {motion} from 'framer-motion';
 // Redux
 import {useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
+import {smallImage} from '../util';
 
-const GameDetails = () => {
+const GameDetails = ({pathId}) => {
     const history = useHistory();
     // Exit details
     const exitDetailsHandler = (e) => {
@@ -23,10 +24,10 @@ const GameDetails = () => {
         <>
         {!isLoading && (
             <CardShadow className="shadow" onClick={exitDetailsHandler}>
-                <Details>
+                <Details layoutId={pathId}>
                     <Stats>
                         <div className="rating">
-                            <h3>{game.name}</h3>
+                            <motion.h3 layoutId={`title ${pathId}`} >{game.name}</motion.h3>
                             <p>Rating: {game.rating}</p>
                         </div>
                         <Info>
@@ -39,14 +40,14 @@ const GameDetails = () => {
                         </Info>
                     </Stats>
                     <Media>
-                        <img src={game.background_image} alt="image"/>
+                        <motion.img layoutId={`image ${pathId}`}  src={smallImage(game.background_image, 1280)} alt="image"/>
                     </Media>
                     <Description>
                         <p>{game.description_raw}</p>
                     </Description>
                     <div className="gallery">
                         {screens.results.map((screen) => (
-                            <img src={screen.image} key={screen.id} alt={screen.id}/>
+                            <img src={smallImage(screen.image, 1280)} key={screen.id} alt={screen.id} loading="lazy" />
                         ))}
                     </div>
                 </Details>
@@ -65,6 +66,7 @@ const CardShadow = styled(motion.div)`
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 5;
     &::-webkit-scrollbar {
         width: 0.5rem;
     }
@@ -84,6 +86,7 @@ const Details = styled(motion.div)`
     position: absolute;
     left: 10%;
     color: black;
+    z-index: 5;
     img {
         width: 100%;
     }
