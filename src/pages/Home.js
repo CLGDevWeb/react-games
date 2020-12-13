@@ -9,6 +9,9 @@ import Game from '../components/Game';
 import styled from 'styled-components';
 import {motion, AnimatePresence, AnimateSharedLayout} from 'framer-motion';
 import {useLocation} from 'react-router-dom';
+// animations
+import {fadeIn} from '../animations';
+
 
 const Home = () => {
     // Get the current location
@@ -24,7 +27,7 @@ const Home = () => {
     const { popular, upcoming, news, searched } = useSelector((state) => state.games);
 
     return(
-        <GameList>
+        <GameList variants={fadeIn} initial="hidden" animate="show">
             <AnimateSharedLayout type="crossfade">
                 <AnimatePresence>
                     { pathId && <GameDetails pathId={pathId} /> }
