@@ -5,6 +5,7 @@ import {motion} from 'framer-motion';
 // redux
 import {useDispatch} from 'react-redux';
 import {loadDetails} from '../actions/detailsAction';
+import {Link} from 'react-router-dom';
 
 
 const Game = ({name, released, image, id}) => {
@@ -17,9 +18,11 @@ const Game = ({name, released, image, id}) => {
 
     return(
         <StyledGame onClick={loadDetailsHandler} >
-            <h3>{name}</h3>
-            <p>{ released }</p>
-            <img src={image} alt={name}/>
+            <Link to={`/game/${id}`}>
+                <h3>{name}</h3>
+                <p>{ released }</p>
+                <img src={image} alt={name}/>
+            </Link>
         </StyledGame>
     )
 };
@@ -30,6 +33,7 @@ const StyledGame = styled(motion.div)`
     text-align: center;
     border-radius: 0.6rem;
     overflow: hidden;
+    cursor: pointer;
     img {
         width: 100%;
         height: 40vh;
