@@ -6,9 +6,9 @@ import {motion} from 'framer-motion';
 import {useDispatch} from 'react-redux';
 import {loadDetails} from '../actions/detailsAction';
 import {Link} from 'react-router-dom';
-import {smallImage} from '../util';
+import {smallImage} from '../data/helpers';
 // Animations
-import {popUp} from '../animations';
+import {popUp} from '../data/animations';
 
 
 const Game = ({name, released, image, id}) => {

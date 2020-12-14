@@ -55,6 +55,12 @@ const GlobalStyles = createGlobalStyle`
     input {
         font-family: 'Montserrat', sans-serif;
     }
+
+    .App {
+        max-width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
 `;
 
 export default GlobalStyles;

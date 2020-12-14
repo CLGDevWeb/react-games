@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {gameDetailsURL, gameScreensURL} from '../api';
+import {gameDetailsURL, gameScreensURL} from '../data/api';
 
 export const loadDetails = (id) => async (dispatch) => {
 

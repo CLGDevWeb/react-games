@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 // Redux
 import {useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
-import {smallImage} from '../util';
+import {smallImage} from '../data/helpers';
 // Images
 import playstation from '../img/playstation.svg';
 import steam from '../img/steam.svg';
@@ -127,12 +127,12 @@ const CardShadow = styled(motion.div)`
 `;
 
 const Details = styled(motion.div)`
-    width: 80%;
+    width: 70%;
     border-radius: 1rem;
     padding: 2rem 5rem;
     background: white;
     position: absolute;
-    left: 10%;
+    left: 15%;
     color: black;
     z-index: 5;
     img {

@@ -7,7 +7,7 @@ import logo from '../img/logo.svg';
 import {fetchSearch} from '../actions/gamesAction';
 import {useDispatch} from 'react-redux';
 // Animations
-import {fadeIn} from '../animations';
+import {fadeIn} from '../data/animations';
 
 const Nav = () => {
     const dispatch = useDispatch();
@@ -31,7 +31,7 @@ const Nav = () => {
         <StyledNav variants={fadeIn} initial="hidden" animate="show">
             <Logo onClick={clearSearched} >
                 <img src={logo} alt="logo"/>
-                <h1>Ignite</h1>
+                <h1>Games App</h1>
             </Logo>
             <form className="search">
                 <input value={textInput} onChange={inputHandler} type="text" />
@@ -42,7 +42,7 @@ const Nav = () => {
 }
 
 const StyledNav = styled(motion.nav)`
-    padding: 3rem 5rem;
+    padding: 3rem 0rem;
     text-align: center;
     input {
         width: 30%;
@@ -66,17 +66,22 @@ const StyledNav = styled(motion.nav)`
         color: white;
         border-bottom-right-radius: 0.3rem;
         border-top-right-radius: 0.3rem;
+        &:hover {
+            background: #da4d4d;
+        }
     }
 `;
 
 const Logo = styled(motion.div)`
     display: flex;
+    align-items: center;
     justify-content: center;
     padding: 1rem;
     cursor: pointer;
     img {
         width: 2rem;
         height: 2rem;
+        margin-right: 0.5rem;
     }
 `;
 

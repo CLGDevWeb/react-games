@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import {motion, AnimatePresence, AnimateSharedLayout} from 'framer-motion';
 import {useLocation} from 'react-router-dom';
 // animations
-import {fadeIn} from '../animations';
+import {fadeIn} from '../data/animations';
 
 
 const Home = () => {
@@ -70,17 +70,17 @@ const Home = () => {
 
 
 const GameList = styled(motion.div)`
-    padding: 0rem 5rem;
+    padding: 0rem 3rem 3rem 3rem;
     h2 {
-        padding: 5rem 0rem
+        padding: 5rem 0rem 3rem 0rem;
     }
 `;
 
 const Games = styled(motion.div)`
     min-height: 80vh;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 5rem 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 4rem 2.4rem;
 `;
 
 export default Home;
