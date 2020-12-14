@@ -54,7 +54,7 @@ const StyledNav = styled(motion.nav)`
         border-bottom-left-radius: 0.3rem;
         border-top-left-radius: 0.3rem;
         &:focus {
-            box-shadow: 0px 0px 20px #ff7676;
+            box-shadow: 0px 0px 20px #ff767661;
         }
     }
     button {
