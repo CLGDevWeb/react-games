@@ -31,7 +31,7 @@ const Nav = () => {
         <StyledNav variants={fadeIn} initial="hidden" animate="show">
             <Logo onClick={clearSearched} >
                 <img src={logo} alt="logo"/>
-                <h1>Games App</h1>
+                <h1>React Games</h1>
             </Logo>
             <form className="search">
                 <input value={textInput} onChange={inputHandler} type="text" />

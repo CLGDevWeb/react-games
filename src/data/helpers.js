@@ -8,3 +8,8 @@ export const smallImage = (imagePath, size) => {
     } 
     return imagePath;
 }
+
+export const formatDate = (date) => {
+    const year = (new Date(date)).toLocaleDateString();
+    return year;
+}
