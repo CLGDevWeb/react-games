@@ -50,11 +50,11 @@ const StyledNav = styled(motion.nav)`
         padding: 0.5rem 1rem;
         border: none;
         margin-top: 1rem;
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
         border-bottom-left-radius: 0.3rem;
         border-top-left-radius: 0.3rem;
         &:focus {
-            box-shadow: 0px 0px 20px #ff767661;
+            box-shadow: 0px 0px 10px #ff767661;
         }
     }
     button {
@@ -66,6 +66,7 @@ const StyledNav = styled(motion.nav)`
         color: white;
         border-bottom-right-radius: 0.3rem;
         border-top-right-radius: 0.3rem;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
         &:hover {
             background: #da4d4d;
         }

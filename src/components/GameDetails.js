@@ -109,6 +109,7 @@ const GameDetails = ({pathId}) => {
 const CardShadow = styled(motion.div)`
     width: 100%;
     min-height: 100vh;
+    padding-top: 3rem;
     overflow-y: scroll;
     background: rgba(0,0,0,0.5);
     position: fixed;
@@ -174,7 +175,7 @@ const Media = styled(motion.div)`
 `;
 
 const Description = styled(motion.div)`
-    margin: 5rem 0rem;
+    margin: 3rem 0rem;
 `;
 
 
